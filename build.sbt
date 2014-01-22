@@ -8,8 +8,7 @@ libraryDependencies ++= Seq(
     jdbc,
     cache,
     /* Spring framework 4.0이상에서는 org.ow2.asm 4.2 버전을 사용해야 합니다. */
-    "org.ow2.asm" % "asm" % "4.2",
-    "org.springframework" % "spring-context" % "4.0.0.RELEASE",
+    "org.ow2.asm" % "asm-all" % "4.2",
     "kr.debop4s" % "debop4s-core" % "1.0-SNAPSHOT",
     "kr.debop4s" % "debop4s-data" % "1.0-SNAPSHOT"
 )
