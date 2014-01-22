@@ -7,8 +7,9 @@ version := "1.0-SNAPSHOT"
 libraryDependencies ++= Seq(
     jdbc,
     cache,
-    "asm" % "asm" % "3.3.1" % "provided",
-    "org.springframework" % "spring-core" % "4.0.0.RELEASE" exclude("org.objectweb.asm", "objectweb.asm"),
+    /* Spring framework 4.0이상에서는 org.ow2.asm 4.2 버전을 사용해야 합니다. */
+    "org.ow2.asm" % "asm" % "4.2",
+    "org.springframework" % "spring-context" % "4.0.0.RELEASE",
     "kr.debop4s" % "debop4s-core" % "1.0-SNAPSHOT",
     "kr.debop4s" % "debop4s-data" % "1.0-SNAPSHOT"
 )
