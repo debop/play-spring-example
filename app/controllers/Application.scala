@@ -1,6 +1,5 @@
 package controllers
 
-import play.api._
 import play.api.mvc._
 import org.springframework.beans.factory.annotation.Autowired
 import services.HelloService
@@ -11,9 +10,9 @@ import services.HelloService
 @org.springframework.stereotype.Controller
 class Application extends Controller {
 
-    @Autowired var helloService: HelloService = _
+  @Autowired val helloService: HelloService = null
 
-    def index = Action {
+  def index = Action {
         Ok(views.html.index(helloService.hello))
     }
 }
