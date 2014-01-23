@@ -1,4 +1,5 @@
 import configurations.SpringConfiguration
+import kr.debop4s.core.spring.Springs
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.ApplicationContext
 import play.api.{Application, GlobalSettings}
@@ -16,6 +17,7 @@ object Global extends GlobalSettings {
     override def onStart(app: Application) {
         super.onStart(app)
         ctx = new AnnotationConfigApplicationContext(classOf[SpringConfiguration])
+        Springs.initialize(ctx)
     }
 
     override def getControllerInstance[A](controllerClass: Class[A]): A =
